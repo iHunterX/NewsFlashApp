@@ -12,7 +12,7 @@ namespace NewsFlashApp.Models
 
         public List<AgendaEntity> AudAgendas { get; private set; }
 
-        public DateTimeOffset Week { get; private set; }
+        public DateTime Week { get; private set; }
 
         public string WebLink { get; private set; }
 
@@ -25,7 +25,7 @@ namespace NewsFlashApp.Models
         public string Author { get; private set; }
 
 
-        public NewsEntity(string title, List<AgendaEntity> audAgendas, DateTimeOffset week, List<string> officialisations, string description, string webLink, Constant.Domain domain, string author)
+        public NewsEntity(string title, List<AgendaEntity> audAgendas, DateTime week, List<string> officialisations, string description, string webLink, Constant.Domain domain, string author)
         {
             Title = title;
             AudAgendas = audAgendas;

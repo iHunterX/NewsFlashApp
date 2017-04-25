@@ -42,7 +42,7 @@ namespace NewsFlashApp.Helpers
         }
 
 
-        public static UIColor ToUIColor(this string hexString)
+        public static UIColor ToUiColor(this string hexString)
         {
             hexString = hexString.Replace("#", "");
 
@@ -63,12 +63,14 @@ namespace NewsFlashApp.Helpers
         public static string RandomString(int length)
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            return new string(Enumerable.Repeat(chars, length)
-              .Select(s => s[Random.Next(s.Length)]).ToArray());
+            lock (Random)
+            {
+                return new string(Enumerable.Repeat(chars, length)
+                    .Select(s => s[Random.Next(s.Length)]).ToArray());
+            }
         }
 
 
-        
         private static readonly object SyncLock = new object();
         public static int GetRandomNumber(int min, int max)
         {
@@ -96,7 +98,7 @@ namespace NewsFlashApp.Helpers
         {
             DateTimeFormatInfo dfi = DateTimeFormatInfo.CurrentInfo;
             DateTime date1 = new DateTime(year, 12, 31);
-            Calendar cal = dfi.Calendar;
+            Calendar cal = dfi?.Calendar;
             return cal.GetWeekOfYear(date1, dfi.CalendarWeekRule,
                                                 dfi.FirstDayOfWeek);
         }

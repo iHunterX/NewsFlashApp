@@ -37,6 +37,14 @@ namespace NewsFlashApp.ViewControllers
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel weekLabel { get; set; }
 
+        [Action ("NextButtonPress:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void NextButtonPress (UIKit.UIButton sender);
+
+        [Action ("PreviousButtonPress:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void PreviousButtonPress (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (bottomView != null) {

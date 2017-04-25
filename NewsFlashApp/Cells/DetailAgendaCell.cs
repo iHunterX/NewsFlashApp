@@ -13,7 +13,7 @@ namespace NewsFlashApp.Cells
 
         public void SetUpCell(NewsEntity news)
         {
-            headLeftView.BackgroundColor = news.Domain.ToDescription().ToUIColor();
+            headLeftView.BackgroundColor = news.Domain.ToDescription().ToUiColor();
             authorNews.Text = news.Author;
             titleNews.Text = news.Title;
         }
