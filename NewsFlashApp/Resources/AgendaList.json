@@ -1,0 +1,197 @@
+[
+ {
+   "Type": "Various",
+   "Agenda": "CODIR",
+   "Group": "Codir"
+ },
+ {
+   "Type": "Various",
+   "Agenda": "CODIR",
+   "Group": "LNO02"
+ },
+ {
+   "Type": "Various",
+   "Agenda": "COMEX",
+   "Group": "Comex"
+ },
+ {
+   "Type": "Various",
+   "Agenda": "COMEX",
+   "Group": "LNO02"
+ },
+ {
+   "Type": "Various",
+   "Agenda": "GROUP Directors",
+   "Group": "GR_Director"
+ },
+ {
+   "Type": "Various",
+   "Agenda": "Board",
+   "Group": "Board"
+ },
+ {
+   "Type": "Various",
+   "Agenda": "Board",
+   "Group": "Board_GovMember"
+ },
+ {
+   "Type": "Various",
+   "Agenda": "Board",
+   "Group": "Board_HeadOfGov"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "Administrative & Finance",
+   "Group": "AdministrativeFinance_GovMember"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "Administrative & Finance",
+   "Group": "AdministrativeFinance_HeadOfGov"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "Business",
+   "Group": "Business_GovMember"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "Business",
+   "Group": "Business_HeadOfGov"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "Communication & Marketing",
+   "Group": "CommunicationMarketing_GovMember"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "Communication & Marketing",
+   "Group": "CommunicationMarketing_HeadOfGov"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "Corporate Development",
+   "Group": "CorporateDevelopment_GovMember"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "Corporate Development",
+   "Group": "CorporateDevelopment_HeadOfGov"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "General Secretary",
+   "Group": "GeneralSecretary_GovMember"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "General Secretary",
+   "Group": "GeneralSecretary_HeadOfGov"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "General Services",
+   "Group": "GeneralServices_GovMember"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "General Services",
+   "Group": "GeneralServices_HeadOfGov"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "Human Resources",
+   "Group": "HR_Governance"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "Human Resources",
+   "Group": "HumanResources_GovMember"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "Human Resources",
+   "Group": "HumanResources_HeadOfGov"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "Information Technology",
+   "Group": "InformationTechnology_GovMember"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "Information Technology",
+   "Group": "InformationTechnology_HeadOfGov"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "Platform Management",
+   "Group": "PlatformManagement_GovMember"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "Platform Management",
+   "Group": "PlatformManagement_HeadOfGov"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "Recruitment",
+   "Group": "Recruitment_GovMember"
+ },
+ {
+   "Type": "Governances",
+   "Agenda": "Recruitment",
+   "Group": "Recruitment_HeadOfGov"
+ },
+ {
+   "Type": "SteerCo",
+   "Agenda": "Finance Steerco",
+   "Group": "AdministrativeFinance_SteerCo"
+ },
+ {
+   "Type": "SteerCo",
+   "Agenda": "Business Steerco",
+   "Group": "Business_SteerCo"
+ },
+ {
+   "Type": "SteerCo",
+   "Agenda": "Commmark Steerco",
+   "Group": "CommunicationMarketing_SteerCo"
+ },
+ {
+   "Type": "SteerCo",
+   "Agenda": "CorpDev Steerco",
+   "Group": "CorporateDevelopment_SteerCo"
+ },
+ {
+   "Type": "SteerCo",
+   "Agenda": "General Secretary Steerco",
+   "Group": "GeneralSecretary_SteerCo"
+ },
+ {
+   "Type": "SteerCo",
+   "Agenda": "General Services Steerco",
+   "Group": "GeneralServices_SteerCo"
+ },
+ {
+   "Type": "SteerCo",
+   "Agenda": "HR Steerco",
+   "Group": "HumanResources_SteerCo"
+ },
+ {
+   "Type": "SteerCo",
+   "Agenda": "IT Steerco",
+   "Group": "InformationTechnology_SteerCo"
+ },
+ {
+   "Type": "SteerCo",
+   "Agenda": "Platform Steerco",
+   "Group": "PlatformManagement_SteerCo"
+ },
+ {
+   "Type": "SteerCo",
+   "Agenda": "Recruitment Steerco",
+   "Group": "Recruitment_SteerCo"
+ }
+]
