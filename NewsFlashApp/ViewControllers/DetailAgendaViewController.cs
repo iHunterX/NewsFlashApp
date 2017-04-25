@@ -4,6 +4,7 @@ using System.Linq;
 using CoreFoundation;
 using Foundation;
 using NewsFlashApp.Cells;
+using NewsFlashApp.Helpers;
 using NewsFlashApp.Models;
 using UIKit;
 
@@ -75,28 +76,20 @@ namespace NewsFlashApp.ViewControllers
 
         public void CreateData(List<AgendaEntity> loadedList)
         {
-
-
-            NewList.Add(new NewsEntity("asdasd",
-                new List<AgendaEntity> { loadedList[0] },
-                Helper.FromIso8601Weeknumber(20, null, DayOfWeek.Sunday),
-                new List<string> { "asdas", "dasdasd" },
-                "asdasdasdasdasdasdasd",
-                "",
-                Constant.Domain.Board
-            ));
-            NewList.Add(new NewsEntity("asdasd", new List<AgendaEntity> { loadedList[0], loadedList[1] }, Helper.FromIso8601Weeknumber(21, null, DayOfWeek.Sunday),
-                new List<string> { "asdas", "dasdasd" }, "asdasdasdasdasdasdasd", "", Constant.Domain.Board));
-            NewList.Add(new NewsEntity("asdasd", new List<AgendaEntity> { loadedList[1], loadedList[0] }, Helper.FromIso8601Weeknumber(22, null, DayOfWeek.Sunday),
-                new List<string> { "asdas", "dasdasd" }, "asdasdasdasdasdasdasd", "", Constant.Domain.CorDev));
-            NewList.Add(new NewsEntity("asdasd", new List<AgendaEntity> { loadedList[1], loadedList[0] }, Helper.FromIso8601Weeknumber(23, null, DayOfWeek.Sunday),
-                new List<string> { "asdas", "dasdasd" }, "asdasdasdasdasdasdasd", "", Constant.Domain.GenSer));
-            NewList.Add(new NewsEntity("asdasd", new List<AgendaEntity> { loadedList[0] }, Helper.FromIso8601Weeknumber(24, null, DayOfWeek.Sunday),
-                new List<string> { "asdas", "dasdasd" }, "asdasdasdasdasdasdasd", "", Constant.Domain.It));
-            NewList.Add(new NewsEntity("asdasd", new List<AgendaEntity> { loadedList[1], loadedList[0] }, Helper.FromIso8601Weeknumber(25, null, DayOfWeek.Sunday),
-                new List<string> { "asdas", "dasdasd" }, "asdasdasdasdasdasdasd", "", Constant.Domain.Business));
-            NewList.Add(new NewsEntity("asdasd", new List<AgendaEntity> { loadedList[1] }, Helper.FromIso8601Weeknumber(10, null, DayOfWeek.Sunday),
-                new List<string> { "asdas", "dasdasd" }, "asdasdasdasdasdasdasd", "", Constant.Domain.AdminFine));
+            int num = Helper.GetRandomNumber(1, 20);
+            for (int i = 1; i <= num; i++)
+            {
+                NewList.Add(new NewsEntity("NewFlash", loadedList,
+                    Helper.FromIso8601Weeknumber(Helper.GetRandomNumber(1, Helper.GetWeeksInYear(2016)), null,
+                        Helper.RandomEnum<DayOfWeek>()),
+                    new List<string> {"asdas", "dasdasd"},
+                    Helper.RandomString(100),
+                    Helper.RandomString(10),
+                    Helper.RandomEnum<Constant.Domain>(),
+                    Helper.RandomString(10)));
+            }
+           
+            
             DispatchQueue.MainQueue.DispatchAsync(tableView.ReloadData);
         }
 

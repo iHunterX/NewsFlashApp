@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using NewsFlashApp.Helpers;
 
-using Foundation;
-using UIKit;
 
 namespace NewsFlashApp.Models
 {
@@ -25,7 +22,10 @@ namespace NewsFlashApp.Models
 
         public Constant.Domain Domain { get; private set; }
 
-        public NewsEntity(string title, List<AgendaEntity> audAgendas, DateTimeOffset week, List<string> officialisations, string description, string webLink, Constant.Domain domain)
+        public string Author { get; private set; }
+
+
+        public NewsEntity(string title, List<AgendaEntity> audAgendas, DateTimeOffset week, List<string> officialisations, string description, string webLink, Constant.Domain domain, string author)
         {
             Title = title;
             AudAgendas = audAgendas;
@@ -33,6 +33,7 @@ namespace NewsFlashApp.Models
             Officialisations = officialisations;
             Description = description;
             WebLink = webLink;
+            Author = author;
             Domain = domain;
         }
     }

@@ -32,5 +32,7 @@
 	</array>
 	<key>MinimumOSVersion</key>
 	<string>9.0</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

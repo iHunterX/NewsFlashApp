@@ -84,28 +84,97 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Cells\AgentdasCell.cs" />
+    <Compile Include="Cells\AgentdasCell.designer.cs">
+      <DependentUpon>AgentdasCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\DetailAgendaCell.cs" />
+    <Compile Include="Cells\DetailAgendaCell.designer.cs">
+      <DependentUpon>DetailAgendaCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\MenuCell.cs" />
+    <Compile Include="Cells\MenuCell.designer.cs">
+      <DependentUpon>MenuCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Constant.cs" />
+    <Compile Include="Helpers\Helper.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Models\AgendaEntity.cs" />
+    <Compile Include="Models\NewsEntity.cs" />
+    <Compile Include="Resources\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\AgentdasViewController.cs" />
+    <Compile Include="ViewControllers\AgentdasViewController.designer.cs">
+      <DependentUpon>AgentdasViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\BaseViewController.cs" />
+    <Compile Include="ViewControllers\BaseViewController.designer.cs">
+      <DependentUpon>BaseViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\CustomNavigationController.cs" />
+    <Compile Include="ViewControllers\DetailAgendaViewController.cs" />
+    <Compile Include="ViewControllers\DetailAgendaViewController.designer.cs">
+      <DependentUpon>DetailAgendaViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\DraftsViewController.cs" />
+    <Compile Include="ViewControllers\DraftsViewController.designer.cs">
+      <DependentUpon>DraftsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\MenuViewController.cs" />
+    <Compile Include="ViewControllers\MenuViewController.designer.cs">
+      <DependentUpon>MenuViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\RootViewController.cs" />
+    <Compile Include="ViewControllers\RootViewController.designer.cs">
+      <DependentUpon>RootViewController.cs</DependentUpon>
+    </Compile>
     <None Include="GettingStarted.Xamarin" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+    <None Include="Resources\AgendaList.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewController.cs" />
     <InterfaceDefinition Include="Main.storyboard" />
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
+    <Reference Include="Xamarin-Sidebar-Unified">
+      <HintPath>..\Components\SidebarNavigation-1.9\lib\ios-unified\Xamarin-Sidebar-Unified.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Entitlements.plist" />
+    <BundleResource Include="Resources\threelines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\AppImages.xcassets\AppIcons.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\LaunchImages.launchimage\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

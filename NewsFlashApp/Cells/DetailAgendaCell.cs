@@ -1,4 +1,5 @@
 ﻿using System;
+using NewsFlashApp.Helpers;
 using NewsFlashApp.Models;
 using UIKit;
 
@@ -13,6 +14,8 @@ namespace NewsFlashApp.Cells
         public void SetUpCell(NewsEntity news)
         {
             headLeftView.BackgroundColor = news.Domain.ToDescription().ToUIColor();
+            authorNews.Text = news.Author;
+            titleNews.Text = news.Title;
         }
     }
 }

@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Globalization;
+using System.Linq;
 using UIKit;
-using static System.Int32;
 
-namespace NewsFlashApp
+namespace NewsFlashApp.Helpers
 {
     static class Helper
     {
@@ -51,11 +52,53 @@ namespace NewsFlashApp
             if (hexString.Length != 6)
                 throw new Exception("Invalid hex string");
 
-            int red = Parse(hexString.Substring(0, 2), System.Globalization.NumberStyles.AllowHexSpecifier);
-            int green = Parse(hexString.Substring(2, 2), System.Globalization.NumberStyles.AllowHexSpecifier);
-            int blue = Parse(hexString.Substring(4, 2), System.Globalization.NumberStyles.AllowHexSpecifier);
+            int red = Int32.Parse(hexString.Substring(0, 2), System.Globalization.NumberStyles.AllowHexSpecifier);
+            int green = Int32.Parse(hexString.Substring(2, 2), System.Globalization.NumberStyles.AllowHexSpecifier);
+            int blue = Int32.Parse(hexString.Substring(4, 2), System.Globalization.NumberStyles.AllowHexSpecifier);
 
             return UIColor.FromRGB(red, green, blue);
+        }
+
+        private static readonly Random Random = new Random();
+        public static string RandomString(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+              .Select(s => s[Random.Next(s.Length)]).ToArray());
+        }
+
+
+        
+        private static readonly object SyncLock = new object();
+        public static int GetRandomNumber(int min, int max)
+        {
+            lock (SyncLock)
+            { // synchronize
+                return Random.Next(min, max);
+            }
+        }
+
+        public static T RandomEnum<T>()
+        {
+            Type type = typeof(T);
+            Array values = Enum.GetValues(type);
+            lock (Random)
+            {
+                object value = values.GetValue(Random.Next(values.Length));
+                return (T)Convert.ChangeType(value, type);
+            }
+        }
+
+
+
+
+        public static int GetWeeksInYear(int year)
+        {
+            DateTimeFormatInfo dfi = DateTimeFormatInfo.CurrentInfo;
+            DateTime date1 = new DateTime(year, 12, 31);
+            Calendar cal = dfi.Calendar;
+            return cal.GetWeekOfYear(date1, dfi.CalendarWeekRule,
+                                                dfi.FirstDayOfWeek);
         }
     }
 }
