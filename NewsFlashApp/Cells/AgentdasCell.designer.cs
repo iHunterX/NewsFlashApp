@@ -5,13 +5,15 @@
 // Manual changes to this file will not be maintained.
 //
 using Foundation;
+using System;
+using System.CodeDom.Compiler;
 
 namespace NewsFlashApp.Cells
 {
-    [Register("AgentdasCell")]
+    [Register ("AgentdasCell")]
     partial class AgentdasCell
     {
-        void ReleaseDesignerOutlets()
+        void ReleaseDesignerOutlets ()
         {
         }
     }

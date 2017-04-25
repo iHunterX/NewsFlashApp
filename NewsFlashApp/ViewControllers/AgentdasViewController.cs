@@ -85,6 +85,7 @@ namespace NewsFlashApp.ViewControllers
                     JsonConvert.DeserializeObject<List<AgendaEntity>>(NewsFlashApp.Resources.Resources.AgendaList);
                 List<AgendaEntity> groupedCustomerList = list.Where(u => u.Agenda == _datalist[indexPath.Row]).ToList();
                 detailAgendaVc.List = groupedCustomerList;
+                detailAgendaVc.NavigationItem.Title = _datalist[indexPath.Row];
                 _parentView.NavController.PushViewController(detailAgendaVc, true);
 
             }

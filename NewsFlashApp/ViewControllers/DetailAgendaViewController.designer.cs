@@ -37,6 +37,10 @@ namespace NewsFlashApp.ViewControllers
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel weekLabel { get; set; }
 
+        [Action ("MeetingDoneSwitchToggle:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void MeetingDoneSwitchToggle (UIKit.UISwitch sender);
+
         [Action ("NextButtonPress:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void NextButtonPress (UIKit.UIButton sender);

@@ -148,6 +148,9 @@
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="SWTableViewCell">
+      <HintPath>..\Components\swtableviewcell-0.3.7.0\lib\ios-unified\SWTableViewCell.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Net.Http" />
@@ -170,6 +173,18 @@
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\AppImages.xcassets\AppIcons.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\IconBack.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\IconBack.imageset\dM1qs.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\IconBack.imageset\J6hHE.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\IconBack.imageset\RsIpj.png">
       <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Resources\AppImages.xcassets\LaunchImages.launchimage\Contents.json">
