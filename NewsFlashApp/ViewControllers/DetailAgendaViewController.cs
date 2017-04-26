@@ -57,7 +57,6 @@ namespace NewsFlashApp.ViewControllers
 
         void FilterDataByWeek(int weekInt)
         {
-
             NewListPerWeek = NewList.Where(x => x.Week.ToIso8601Weeknumber() == weekInt).ToList();
             weekLabel.Text = "Week " + _todayweek + " | " + DateTime.Today.Year;
             tableView.Source = new DetailTableSource(NewListPerWeek, this);

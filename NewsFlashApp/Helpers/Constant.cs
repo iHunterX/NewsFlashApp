@@ -15,7 +15,7 @@ namespace NewsFlashApp.Helpers
         }
 
         public enum Domain
-        {
+        { 
             [Description("00A3DB")]
             AdminFine = 0,
             [Description("08618E")]
@@ -39,7 +39,6 @@ namespace NewsFlashApp.Helpers
             [Description("000000")]
             Various
         }
-
 
     }
 }

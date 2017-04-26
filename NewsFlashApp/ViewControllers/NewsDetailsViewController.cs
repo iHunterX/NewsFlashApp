@@ -1,13 +1,14 @@
-﻿using Foundation;
-using System;
+﻿using System;
 using UIKit;
 
-namespace NewsFlashApp
+namespace NewsFlashApp.ViewControllers
 {
     public partial class NewsDetailsViewController : UIViewController
     {
         public NewsDetailsViewController (IntPtr handle) : base (handle)
         {
         }
+
+
     }
 }
