@@ -32,7 +32,7 @@ namespace NewsFlashApp.ViewControllers
                 var viewControllers = new UIViewController[] { startVc };
 
                 PageViewController.SetViewControllers(viewControllers, UIPageViewControllerNavigationDirection.Forward, false, null);
-                PageViewController.View.Frame = new CGRect(0, 64, View.Frame.Width, View.Frame.Size.Height);
+                PageViewController.View.Frame = View.Bounds;
                 AddChildViewController(PageViewController);
                 View.AddSubview(PageViewController.View);
                 PageViewController.DidMoveToParentViewController(this);

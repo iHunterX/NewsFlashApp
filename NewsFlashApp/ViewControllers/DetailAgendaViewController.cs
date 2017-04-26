@@ -165,7 +165,9 @@ namespace NewsFlashApp.ViewControllers
                     Helper.RandomString(100),
                     Helper.RandomString(10),
                     Helper.RandomEnum<Constant.Domain>(),
-                    Helper.RandomString(10)));
+                    Helper.RandomString(10),
+                    Helper.RandomEnum<Constant.Domain>().ToFullDomain()
+                    ));
             }
            ReloadDataTableView();
             

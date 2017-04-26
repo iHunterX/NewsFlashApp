@@ -19,6 +19,10 @@ namespace NewsFlashApp.ViewControllers
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel audienceComLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel authorLabel { get; set; }
 
         [Outlet]
@@ -42,6 +46,11 @@ namespace NewsFlashApp.ViewControllers
             if (audienceAgendasLabel != null) {
                 audienceAgendasLabel.Dispose ();
                 audienceAgendasLabel = null;
+            }
+
+            if (audienceComLabel != null) {
+                audienceComLabel.Dispose ();
+                audienceComLabel = null;
             }
 
             if (authorLabel != null) {

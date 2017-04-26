@@ -28,7 +28,9 @@ namespace NewsFlashApp.Models
 
         public bool Selected { get; private set; }
 
-        public NewsEntity(string title, List<AgendaEntity> audAgendas, DateTime week, List<string> officialisations, string description, string webLink, Constant.Domain domain, string author, bool selected = false, bool isDraft = false)
+        public string Topic { get; private set; }
+
+        public NewsEntity(string title, List<AgendaEntity> audAgendas, DateTime week, List<string> officialisations, string description, string webLink, Constant.Domain domain, string author, string topic, bool selected = false, bool isDraft = false)
         {
             Title = title;
             AudAgendas = audAgendas;
@@ -37,8 +39,9 @@ namespace NewsFlashApp.Models
             Description = description;
             WebLink = webLink;
             Author = author;
+            Topic = topic;
             Selected = selected;
-            this.IsDraft = isDraft;
+            IsDraft = isDraft;
             Domain = domain;
         }
     }

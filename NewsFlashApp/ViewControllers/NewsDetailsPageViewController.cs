@@ -35,6 +35,7 @@ namespace NewsFlashApp.ViewControllers
             weekLabel.Text =  "Week " + news.Week.ToIso8601Weeknumber() + " | " + news.Week.Year;
             newDescriptionTextView.Text = news.Description;
             authorLabel.Text = "By " + news.Author;
+            news.AudAgendas.ForEach(entity => audienceComLabel.Text += entity.Agenda);
         }
 
 
