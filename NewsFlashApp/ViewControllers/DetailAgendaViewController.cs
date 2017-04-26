@@ -48,24 +48,17 @@ namespace NewsFlashApp.ViewControllers
             tableView.Source = new DetailTableSource(NewListPerWeek, this);
             _cellDelegate = new CellDelegate(NewListPerWeek, tableView);
             FilterDataByWeek(_todayweek);
-
-            //NavigationItem.BackBarButtonItem = new UIBarButtonItem("CustomTitleHere",
-            //    UIBarButtonItemStyle.Plain, null);
-            // Perform any additional setup after loading the view, typically from a nib.
             NavigationItem.SetLeftBarButtonItem(new UIBarButtonItem(UIImage.FromBundle("IconBack"), UIBarButtonItemStyle.Plain, (sender, args) =>
             {
                 NavigationController.PopViewController(true);
             }), true);
-            //NavigationItem.BackBarButtonItem = new UIBarButtonItem(UI,UIBarButtonItemStyle.Plain,null);
+
         }
 
         void FilterDataByWeek(int weekInt)
         {
 
             NewListPerWeek = NewList.Where(x => x.Week.ToIso8601Weeknumber() == weekInt).ToList();
-            //UIAlertController okAlertController = UIAlertController.Create("Row count", NewListPerWeek.Count.ToString(), UIAlertControllerStyle.Alert);
-            //okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
-            //PresentViewController(okAlertController,true,null);
             weekLabel.Text = "Week " + _todayweek + " | " + DateTime.Today.Year;
             tableView.Source = new DetailTableSource(NewListPerWeek, this);
             _cellDelegate = new CellDelegate(NewListPerWeek, tableView);

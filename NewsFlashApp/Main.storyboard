@@ -27,7 +27,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="147" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="391.2319" y="762.9348"/>
+            <point key="canvasLocation" x="376.2319" y="847.9348"/>
         </scene>
         <!--Agentdas-->
         <scene sceneID="151">
@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="154" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069.565" y="17.93478"/>
+            <point key="canvasLocation" x="838.5649" y="14.93478"/>
         </scene>
         <!--Detail Agenda View Controller-->
         <scene sceneID="Jkh-Pa-QFB">
@@ -144,13 +144,13 @@
                                                     </variation>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmv-BQ-qWQ" misplaced="YES">
-                                                    <rect key="frame" x="15" y="8" width="358" height="27"/>
+                                                    <rect key="frame" x="15" y="8" width="344" height="27"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhG-Bw-4Sb" misplaced="YES">
-                                                    <rect key="frame" x="15" y="43" width="358" height="56"/>
+                                                    <rect key="frame" x="15" y="43" width="344" height="56"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -238,7 +238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cP-SP-ny3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1740.58" y="17.11957"/>
+            <point key="canvasLocation" x="1274.58" y="16.11957"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="158">
@@ -338,4 +338,7 @@
         <image name="threelines.png" width="30" height="30"/>
         <image name="IconBack" width="26" height="42"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination" type="retina55"/>
+    </simulatedMetricsContainer>
 </document>

@@ -33,7 +33,7 @@ namespace NewsFlashApp.ViewControllers
 
             // Perform any additional setup after loading the view, typically from a nib.
             NavigationItem.SetRightBarButtonItem(
-                new UIBarButtonItem(UIImage.FromBundle("threelines")
+                new UIBarButtonItem(UIImage.FromBundle("Add")
                     , UIBarButtonItemStyle.Plain
                     , (sender, args) => {
                         SidebarController.ToggleMenu();
