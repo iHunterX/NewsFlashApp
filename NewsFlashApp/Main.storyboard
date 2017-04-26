@@ -868,28 +868,27 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gfd-FR-bIP">
-                                                    <rect key="frame" x="10" y="16" width="29" height="29"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="gfd-FR-bIP" secondAttribute="height" multiplier="1:1" id="5C2-yn-10U"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBm-cg-8Hh">
-                                                    <rect key="frame" x="47" y="16" width="359" height="29"/>
+                                                    <rect key="frame" x="46.666666666666657" y="16" width="359.33333333333337" height="28.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgh-xR-zXf">
+                                                    <rect key="frame" x="8" y="16" width="28.666666666666664" height="28.666666666666664"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Qgh-xR-zXf" secondAttribute="height" multiplier="1:1" id="4Rt-Ih-lLc"/>
+                                                    </constraints>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="gfd-FR-bIP" secondAttribute="bottom" constant="16" id="1J4-hf-E5r"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Qgh-xR-zXf" secondAttribute="bottom" constant="8" id="4KK-hf-zdL"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="HBm-cg-8Hh" secondAttribute="trailing" id="7Co-r0-vyc"/>
-                                                <constraint firstItem="HBm-cg-8Hh" firstAttribute="leading" secondItem="gfd-FR-bIP" secondAttribute="trailing" constant="8" id="IW9-PY-CCb"/>
-                                                <constraint firstItem="gfd-FR-bIP" firstAttribute="top" secondItem="Ixh-i3-epI" secondAttribute="top" constant="16" id="MpP-Wv-nbk"/>
-                                                <constraint firstItem="HBm-cg-8Hh" firstAttribute="top" secondItem="gfd-FR-bIP" secondAttribute="top" id="aef-sr-SBf"/>
-                                                <constraint firstItem="gfd-FR-bIP" firstAttribute="centerY" secondItem="Ixh-i3-epI" secondAttribute="centerY" id="hge-e4-F7F"/>
-                                                <constraint firstItem="gfd-FR-bIP" firstAttribute="leading" secondItem="Ixh-i3-epI" secondAttribute="leading" constant="10" id="ucn-sU-zPb"/>
-                                                <constraint firstItem="HBm-cg-8Hh" firstAttribute="bottom" secondItem="gfd-FR-bIP" secondAttribute="bottom" id="yBG-HG-9bl"/>
+                                                <constraint firstItem="Qgh-xR-zXf" firstAttribute="leading" secondItem="Ixh-i3-epI" secondAttribute="leadingMargin" id="She-Wf-5Vo"/>
+                                                <constraint firstItem="Qgh-xR-zXf" firstAttribute="top" secondItem="Ixh-i3-epI" secondAttribute="topMargin" constant="8" id="Wot-Cn-h31"/>
+                                                <constraint firstItem="HBm-cg-8Hh" firstAttribute="leading" secondItem="Qgh-xR-zXf" secondAttribute="trailing" constant="10" id="YIu-nJ-Zeu"/>
+                                                <constraint firstItem="HBm-cg-8Hh" firstAttribute="bottom" secondItem="Qgh-xR-zXf" secondAttribute="bottom" id="Zke-x7-tSZ"/>
+                                                <constraint firstItem="HBm-cg-8Hh" firstAttribute="top" secondItem="Qgh-xR-zXf" secondAttribute="top" id="rdL-WZ-Z5o"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
