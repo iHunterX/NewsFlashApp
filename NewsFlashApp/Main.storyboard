@@ -850,15 +850,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="jQu-0B-RRT">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="0Qo-JG-M7r"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hDY-cQ-vY1">
-                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="61" id="sw2-o4-hn9">
@@ -894,14 +887,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="jQu-0B-RRT">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0Qo-JG-M7r"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hDY-cQ-vY1" secondAttribute="trailing" id="4Wo-su-nIM"/>
+                            <constraint firstItem="jQu-0B-RRT" firstAttribute="top" secondItem="k5f-Rv-bOP" secondAttribute="bottom" id="8Tz-2H-qaK"/>
                             <constraint firstAttribute="trailing" secondItem="jQu-0B-RRT" secondAttribute="trailing" id="C7j-bC-Anm"/>
                             <constraint firstItem="jQu-0B-RRT" firstAttribute="leading" secondItem="36r-jS-yVT" secondAttribute="leading" id="Jgx-VF-4RA"/>
                             <constraint firstItem="hDY-cQ-vY1" firstAttribute="top" secondItem="jQu-0B-RRT" secondAttribute="bottom" id="LBq-Fk-Q4O"/>
-                            <constraint firstItem="jQu-0B-RRT" firstAttribute="top" secondItem="36r-jS-yVT" secondAttribute="top" id="gmT-gs-hPU"/>
                             <constraint firstItem="hDY-cQ-vY1" firstAttribute="leading" secondItem="36r-jS-yVT" secondAttribute="leading" id="oL3-pO-T99"/>
                             <constraint firstItem="53Z-QX-fg0" firstAttribute="top" secondItem="hDY-cQ-vY1" secondAttribute="bottom" id="vus-IP-dgW"/>
                         </constraints>
@@ -931,22 +931,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nen-Qn-tbZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="0Hz-k3-an0"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ID4-R2-4ld">
-                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="61" id="gcO-qO-u6t">
                                         <rect key="frame" x="0.0" y="28" width="414" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gcO-qO-u6t" id="QKL-1Z-dfU">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qia-2k-mwB">
@@ -966,12 +959,19 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nen-Qn-tbZ">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0Hz-k3-an0"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ID4-R2-4ld" firstAttribute="top" secondItem="nen-Qn-tbZ" secondAttribute="bottom" id="2EP-NC-DLJ"/>
+                            <constraint firstItem="nen-Qn-tbZ" firstAttribute="top" secondItem="PQf-Ck-rbL" secondAttribute="bottom" id="Kzo-UT-VH3"/>
                             <constraint firstAttribute="trailing" secondItem="ID4-R2-4ld" secondAttribute="trailing" id="UTY-6o-Eby"/>
-                            <constraint firstItem="nen-Qn-tbZ" firstAttribute="top" secondItem="Mnf-5D-UWy" secondAttribute="top" id="dsa-BD-G4e"/>
                             <constraint firstItem="ID4-R2-4ld" firstAttribute="leading" secondItem="Mnf-5D-UWy" secondAttribute="leading" id="gyF-Jc-QLE"/>
                             <constraint firstItem="nen-Qn-tbZ" firstAttribute="leading" secondItem="Mnf-5D-UWy" secondAttribute="leading" id="rH7-DC-bpT"/>
                             <constraint firstAttribute="trailing" secondItem="nen-Qn-tbZ" secondAttribute="trailing" id="rJx-85-XcJ"/>
@@ -981,7 +981,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZHn-4Y-g17" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3743" y="920"/>
+            <point key="canvasLocation" x="3743" y="952"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
