@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using CoreGraphics;
 using NewsFlashApp.Models;
 using UIKit;
 
@@ -57,10 +56,7 @@ namespace NewsFlashApp.ViewControllers
                 vc.News = NewsList[index];
                 return vc;
             }
-            else
-            {
-                return null;
-            }
+            return null;
         }
 
         private class PageViewControllerDataSource : UIPageViewControllerDataSource
@@ -84,16 +80,10 @@ namespace NewsFlashApp.ViewControllers
                     {
                         return null;
                     }
-                    else
-                    {
-                        index--;
-                        return _parentViewController.ViewControllerAtIndex(index);
-                    }
+                    index--;
+                    return _parentViewController.ViewControllerAtIndex(index);
                 }
-                else
-                {
-                    return null;
-                }
+                return null;
             }
 
             public override UIViewController GetNextViewController(UIPageViewController pageViewController, UIViewController referenceViewController)
@@ -108,15 +98,9 @@ namespace NewsFlashApp.ViewControllers
                     {
                         return null;
                     }
-                    else
-                    {
-                        return _parentViewController.ViewControllerAtIndex(index);
-                    }
+                    return _parentViewController.ViewControllerAtIndex(index);
                 }
-                else
-                {
-                    return null;
-                }
+                return null;
             }
 
             public override nint GetPresentationCount(UIPageViewController pageViewController)

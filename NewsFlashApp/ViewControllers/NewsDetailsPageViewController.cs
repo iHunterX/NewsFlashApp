@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Linq;
+using AssetsLibrary;
+using Foundation;
 using NewsFlashApp.Helpers;
 using NewsFlashApp.Models;
 using UIKit;
@@ -29,13 +31,14 @@ namespace NewsFlashApp.ViewControllers
         void SetData(NewsEntity news)
         {
             topicLabel.BackgroundColor = news.Domain.ToDescription().ToUiColor();
-            news.AudAgendas.ForEach(entity => audienceAgendasLabel.Text += entity.Agenda);
+            news.AudAgendas.ForEach(entity => audienceAgendasLabel.Text += string.Join(", ",entity.Agenda).ToString());
             topicLabel.Text = news.Domain.ToFullDomain();
             titlelabel.Text = news.Title;
             weekLabel.Text =  "Week " + news.Week.ToIso8601Weeknumber() + " | " + news.Week.Year;
             newDescriptionTextView.Text = news.Description;
             authorLabel.Text = "By " + news.Author;
-            news.AudAgendas.ForEach(entity => audienceComLabel.Text += entity.Agenda);
+            news.AudAgendas.ForEach(entity => audienceComLabel.Text += string.Join(", ", entity.Agenda).ToString());
+
         }
 
 
@@ -46,6 +49,9 @@ namespace NewsFlashApp.ViewControllers
             audienceAgendasLabel.TextColor = UIColor.LightGray;
             weekLabel.TextColor = UIColor.LightGray;
             newDescriptionTextView.Editable = false;
+            audienceAgendasLabel.Text = "Audience Agenda: ";
+            audienceComLabel.Text = "Audience Communicaiton: ";
+
         }
     }
 }
