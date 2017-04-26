@@ -16,10 +16,10 @@ namespace NewsFlashApp.ViewControllers
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            NavigationItem.SetLeftBarButtonItem(new UIBarButtonItem(UIImage.FromBundle("IconBack"), UIBarButtonItemStyle.Plain, (sender, args) =>
-            {
-                NavigationController.PopViewController(true);
-            }), true);
+            //NavigationItem.SetLeftBarButtonItem(new UIBarButtonItem(UIImage.FromBundle("IconBack"), UIBarButtonItemStyle.Plain, (sender, args) =>
+            //{
+            //    NavigationController.PopViewController(true);
+            //}), true);
 
         }
 
@@ -37,6 +37,11 @@ namespace NewsFlashApp.ViewControllers
         public override nfloat GetHeightForFooter(UITableView tableView, nint section)
         {
             return section == 3 && !IsEdit ? (nfloat) 0.1 : base.GetHeightForFooter(tableView, section);
+        }
+
+        partial void CancelButtonPressed(UIBarButtonItem sender)
+        {
+            NavigationController.DismissViewController(true,null);
         }
     }
 }

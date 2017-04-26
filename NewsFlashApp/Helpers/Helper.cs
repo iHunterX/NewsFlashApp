@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.Linq;
 using UIKit;
+using static System.Int32;
 
 namespace NewsFlashApp.Helpers
 {
@@ -52,9 +53,9 @@ namespace NewsFlashApp.Helpers
             if (hexString.Length != 6)
                 throw new Exception("Invalid hex string");
 
-            int red = Int32.Parse(hexString.Substring(0, 2), System.Globalization.NumberStyles.AllowHexSpecifier);
-            int green = Int32.Parse(hexString.Substring(2, 2), System.Globalization.NumberStyles.AllowHexSpecifier);
-            int blue = Int32.Parse(hexString.Substring(4, 2), System.Globalization.NumberStyles.AllowHexSpecifier);
+            var red = Parse(hexString.Substring(0, 2), NumberStyles.AllowHexSpecifier);
+            var green = Parse(hexString.Substring(2, 2), NumberStyles.AllowHexSpecifier);
+            var blue = Parse(hexString.Substring(4, 2), NumberStyles.AllowHexSpecifier);
 
             return UIColor.FromRGB(red, green, blue);
         }

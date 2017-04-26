@@ -51,7 +51,8 @@ namespace NewsFlashApp.ViewControllers
                 if (editVc == null) return;
                 editVc.IsEdit = true;
                 editVc.News = NewsList[_currentIndex];
-                NavigationController.PushViewController(editVc,true);
+                var createEditNavigationController = new UINavigationController(editVc);
+                NavigationController.PresentViewController(createEditNavigationController, true, null);
             }), true);
         }
 
