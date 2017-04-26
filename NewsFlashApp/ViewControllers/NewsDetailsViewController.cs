@@ -9,7 +9,7 @@ namespace NewsFlashApp.ViewControllers
     public partial class NewsDetailsViewController : UIViewController
     {
         public int FirstIndex;
-        private UIPageViewController _pageViewController { get; set; }
+        private UIPageViewController PageViewController { get; set; }
 
         public List<NewsEntity> NewsList { get; set; }
         public NewsDetailsViewController (IntPtr handle) : base (handle)
@@ -21,21 +21,21 @@ namespace NewsFlashApp.ViewControllers
             base.ViewDidLoad();
             NavigationItem.Title = Title;
 
-            _pageViewController = this.Storyboard.InstantiateViewController("PageViewController") as PageViewController;
+            PageViewController = Storyboard.InstantiateViewController("PageViewController") as PageViewController;
             
 
-            if (_pageViewController != null)
+            if (PageViewController != null)
             {
-                _pageViewController.DataSource = new PageViewControllerDataSource(this, NewsList);
+                PageViewController.DataSource = new PageViewControllerDataSource(this, NewsList);
 
-                var startVc = this.ViewControllerAtIndex(FirstIndex) as NewsDetailsPageViewController;
+                var startVc = ViewControllerAtIndex(FirstIndex) as NewsDetailsPageViewController;
                 var viewControllers = new UIViewController[] { startVc };
 
-                _pageViewController.SetViewControllers(viewControllers, UIPageViewControllerNavigationDirection.Forward, false, null);
-                _pageViewController.View.Frame = new CGRect(0, 64, View.Frame.Width, View.Frame.Size.Height);
-                AddChildViewController(_pageViewController);
-                View.AddSubview(_pageViewController.View);
-                _pageViewController.DidMoveToParentViewController(this);
+                PageViewController.SetViewControllers(viewControllers, UIPageViewControllerNavigationDirection.Forward, false, null);
+                PageViewController.View.Frame = new CGRect(0, 64, View.Frame.Width, View.Frame.Size.Height);
+                AddChildViewController(PageViewController);
+                View.AddSubview(PageViewController.View);
+                PageViewController.DidMoveToParentViewController(this);
             }
 
             NavigationItem.SetLeftBarButtonItem(new UIBarButtonItem(UIImage.FromBundle("IconBack"), UIBarButtonItemStyle.Plain, (sender, args) =>
@@ -50,22 +50,27 @@ namespace NewsFlashApp.ViewControllers
 
         public UIViewController ViewControllerAtIndex(int index)
         {
-            var vc = this.Storyboard.InstantiateViewController("NewsDetailsPageViewController") as NewsDetailsPageViewController;
-            vc.pageIndex = index;
-            vc.News = NewsList[index];
-            return vc;
+            var vc = Storyboard.InstantiateViewController("NewsDetailsPageViewController") as NewsDetailsPageViewController;
+            if (vc != null)
+            {
+                vc.PageIndex = index;
+                vc.News = NewsList[index];
+                return vc;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         private class PageViewControllerDataSource : UIPageViewControllerDataSource
         {
-            private NewsDetailsViewController _parentViewController;
+            private readonly NewsDetailsViewController _parentViewController;
             private List<NewsEntity> _newsList;
-
-
 
             public PageViewControllerDataSource(NewsDetailsViewController parentViewController, List<NewsEntity> newsList)
             {
-                _parentViewController = parentViewController as NewsDetailsViewController;
+                _parentViewController = parentViewController;
                 _newsList = newsList;
             }
 
@@ -74,7 +79,7 @@ namespace NewsFlashApp.ViewControllers
                 var vc = referenceViewController as NewsDetailsPageViewController;
                 if (vc != null)
                 {
-                    var index = vc.pageIndex;
+                    var index = vc.PageIndex;
                     if (index == 0)
                     {
                         return null;
@@ -94,16 +99,23 @@ namespace NewsFlashApp.ViewControllers
             public override UIViewController GetNextViewController(UIPageViewController pageViewController, UIViewController referenceViewController)
             {
                 var vc = referenceViewController as NewsDetailsPageViewController;
-                var index = vc.pageIndex;
-
-                index++;
-                if (index == _newsList.Count)
+                if (vc != null)
                 {
-                    return null;
+                    var index = vc.PageIndex;
+
+                    index++;
+                    if (index == _newsList.Count)
+                    {
+                        return null;
+                    }
+                    else
+                    {
+                        return _parentViewController.ViewControllerAtIndex(index);
+                    }
                 }
                 else
                 {
-                    return _parentViewController.ViewControllerAtIndex(index);
+                    return null;
                 }
             }
 
@@ -117,6 +129,5 @@ namespace NewsFlashApp.ViewControllers
                 return 0;
             }
         }
-
     }
 }

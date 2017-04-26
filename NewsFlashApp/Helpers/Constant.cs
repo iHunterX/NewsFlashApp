@@ -40,5 +40,35 @@ namespace NewsFlashApp.Helpers
             Various
         }
 
+        public static string ToFullDomain(this Domain value)
+        {
+            switch (value)
+            {
+                case Domain.Various:
+                    return "Vaious";
+                case Domain.AdminFine:
+                    return "Administrative & Finance";
+                case Domain.Board:
+                    return "Administrative & Finance";
+                case Domain.Business:
+                    return "Administrative & Finance";
+                case Domain.CommMar:
+                    return "Communication & Marketing";
+                case Domain.CorDev:
+                    return "Corporate Development";
+                case Domain.GenSec:
+                    return "General Secretary";
+                case Domain.GenSer:
+                    return "General Services";
+                case Domain.Hr:
+                    return "Human Resources";
+                case Domain.It:
+                    return "Information Technology";
+                case Domain.PlaMgm:
+                    return "Platform Management";
+                default:
+                    return "";
+            }
+        }
     }
 }
