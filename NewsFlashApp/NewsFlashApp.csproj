@@ -96,6 +96,10 @@
     <Compile Include="Cells\MenuCell.designer.cs">
       <DependentUpon>MenuCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewControllers\CreateEditNewsViewController.cs" />
+    <Compile Include="ViewControllers\CreateEditNewsViewController.designer.cs">
+      <DependentUpon>CreateEditNewsViewController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\Constant.cs" />
     <Compile Include="Helpers\Helper.cs" />
     <Compile Include="Main.cs" />
