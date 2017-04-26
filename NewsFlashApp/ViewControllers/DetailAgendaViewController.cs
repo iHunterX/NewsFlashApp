@@ -136,7 +136,11 @@ namespace NewsFlashApp.ViewControllers
 
             public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
             {
-
+                tableView.DeselectRow(indexPath, true);
+                var newsDetailVc = (NewsDetailsViewController)_parentView.Storyboard.InstantiateViewController("NewsDetailsViewController");
+                newsDetailVc.FirstIndex = indexPath.Row;
+                newsDetailVc.NewsList = _datalist;
+                _parentView.NavigationController.PushViewController(newsDetailVc,true);
             }
 
 

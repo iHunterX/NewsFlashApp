@@ -102,6 +102,10 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Models\AgendaEntity.cs" />
     <Compile Include="Models\NewsEntity.cs" />
+    <Compile Include="ViewControllers\NewsDetailsPageViewController.cs" />
+    <Compile Include="ViewControllers\NewsDetailsPageViewController.designer.cs">
+      <DependentUpon>NewsDetailsPageViewController.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewControllers\NewsDetailsViewController.cs" />
     <Compile Include="ViewControllers\NewsDetailsViewController.designer.cs">
       <DependentUpon>NewsDetailsViewController.cs</DependentUpon>
@@ -131,6 +135,10 @@
     <Compile Include="ViewControllers\MenuViewController.cs" />
     <Compile Include="ViewControllers\MenuViewController.designer.cs">
       <DependentUpon>MenuViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\PageViewController.cs" />
+    <Compile Include="ViewControllers\PageViewController.designer.cs">
+      <DependentUpon>PageViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewControllers\RootViewController.cs" />
     <Compile Include="ViewControllers\RootViewController.designer.cs">
@@ -188,7 +196,43 @@
     <ImageAsset Include="Resources\AppImages.xcassets\Add.imageset\Contents.json">
       <InProject>false</InProject>
     </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\Agendas.imageset\Agendas.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\Agendas.imageset\Agendas@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\Agendas.imageset\Agendas@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\Agendas.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
     <ImageAsset Include="Resources\AppImages.xcassets\AppIcons.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\Draft.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\Draft.imageset\Document.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\Draft.imageset\Document@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\Draft.imageset\Document@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\Edit.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\Edit.imageset\Edit.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\Edit.imageset\Edit@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\Edit.imageset\Edit@3x.png">
       <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Resources\AppImages.xcassets\IconBack.imageset\Contents.json">
@@ -204,6 +248,18 @@
       <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Resources\AppImages.xcassets\LaunchImages.launchimage\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\Masternav.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\Masternav.imageset\MasterNavigation.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\Masternav.imageset\MasterNavigation@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\AppImages.xcassets\Masternav.imageset\MasterNavigation@3x.png">
       <InProject>false</InProject>
     </ImageAsset>
   </ItemGroup>

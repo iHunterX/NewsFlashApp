@@ -22,6 +22,18 @@ namespace NewsFlashApp.ViewControllers
                 menuList.Source = new MyListSource(listControllers, this);
         }
 
+        public override void ViewDidAppear(bool animated)
+        {
+            base.ViewDidAppear(animated);
+            UIApplication.SharedApplication.StatusBarStyle = UIStatusBarStyle.BlackTranslucent;
+        }
+
+        public override void ViewDidDisappear(bool animated)
+        {
+            base.ViewDidDisappear(animated);
+            UIApplication.SharedApplication.StatusBarStyle = UIStatusBarStyle.LightContent;
+        }
+
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();
@@ -54,7 +66,7 @@ namespace NewsFlashApp.ViewControllers
                         strImg = "Agendas";
                         break;
                     case 1:
-                        strImg = "";
+                        strImg = "Draft";
                         break;
                     default:
                         strImg = null;

@@ -335,7 +335,7 @@
         </scene>
         <scene sceneID="491">
             <objects>
-                <viewController id="492" sceneMemberID="viewController" customClass="NewsDetailsViewController" storyboardIdentifier="NewsDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                <viewController id="492" sceneMemberID="viewController" customClass="NewsDetailsViewController" storyboardIdentifier="NewsDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" title="News Details">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="489"/>
                         <viewControllerLayoutGuide type="bottom" id="490"/>
@@ -344,36 +344,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="496" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="20" y="61" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="496"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="496"/>
-                            </mask>
-                        </variation>
+                        <subviews/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="494" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="870" y="846"/>
         </scene>
+        <scene sceneID="503">
+            <objects>
+                <viewController id="504" sceneMemberID="viewController" customClass="NewsDetailsPageViewController" storyboardIdentifier="NewsDetailsPageViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="501"/>
+                        <viewControllerLayoutGuide type="bottom" id="502"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="505">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="506" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1784" y="859"/>
+        </scene>
+        <scene sceneID="508">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="min" id="509" sceneMemberID="viewController" customClass="PageViewController" storyboardIdentifier="PageViewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="510" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1340" y="843"/>
+        </scene>
     </scenes>
     <resources>
         <image name="threelines.png" width="30" height="30"/>
         <image name="IconBack" width="26" height="42"/>
         <image name="Add" width="22" height="22"/>
+        <image name="Edit" width="22" height="22"/>
+        <image name="Masternav" width="22" height="15"/>
+        <image name="Agendas" width="22" height="20"/>
+        <image name="Draft" width="23" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedScreenMetrics key="destination" type="retina55"/>

@@ -24,7 +24,7 @@ namespace NewsFlashApp.ViewControllers
             base.ViewDidLoad();
             NavigationItem.Title = Title;
             NavigationItem.SetLeftBarButtonItem(
-                new UIBarButtonItem(UIImage.FromBundle("threelines")
+                new UIBarButtonItem(UIImage.FromBundle("Masternav")
                     , UIBarButtonItemStyle.Plain
                     , (sender, args) => {
                         SidebarController.ToggleMenu();

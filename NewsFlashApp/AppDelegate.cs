@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using NewsFlashApp.Helpers;
 using NewsFlashApp.ViewControllers;
 using UIKit;
 
@@ -25,7 +26,7 @@ namespace NewsFlashApp
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
             UIApplication.SharedApplication.StatusBarStyle = UIStatusBarStyle.LightContent;
-            UINavigationBar.Appearance.BarTintColor = UIColor.LightGray;
+            UINavigationBar.Appearance.BarTintColor = "#fca93c".ToUiColor();
             UINavigationBar.Appearance.TintColor = UIColor.White;
 
             var firstAttributes = new UIStringAttributes
