@@ -1,8 +1,7 @@
-﻿using Foundation;
-using System;
+﻿using System;
 using UIKit;
 
-namespace NewsFlashApp
+namespace NewsFlashApp.Cells
 {
     public partial class SearchCell : UITableViewCell
     {

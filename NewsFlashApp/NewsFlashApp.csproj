@@ -88,8 +88,8 @@
     <Compile Include="Cells\AgendaSearchCell.designer.cs">
       <DependentUpon>AgendaSearchCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="SearchCell.cs" />
-    <Compile Include="SearchCell.designer.cs">
+    <Compile Include="Cells\SearchCell.cs" />
+    <Compile Include="Cells\SearchCell.designer.cs">
       <DependentUpon>SearchCell.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewControllers\AgendaSearchViewController.cs" />

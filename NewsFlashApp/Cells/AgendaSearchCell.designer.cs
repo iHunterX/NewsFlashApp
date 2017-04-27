@@ -13,25 +13,8 @@ namespace NewsFlashApp.Cells
     [Register ("AgendaSearchCell")]
     partial class AgendaSearchCell
     {
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel agendaLabel { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton selectedButton { get; set; }
-
         void ReleaseDesignerOutlets ()
         {
-            if (agendaLabel != null) {
-                agendaLabel.Dispose ();
-                agendaLabel = null;
-            }
-
-            if (selectedButton != null) {
-                selectedButton.Dispose ();
-                selectedButton = null;
-            }
         }
     }
 }

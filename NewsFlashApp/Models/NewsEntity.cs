@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using Foundation;
 using NewsFlashApp.Helpers;
 
@@ -31,7 +32,7 @@ namespace NewsFlashApp.Models
 
         public string Topic { get; private set; }
 
-        public NewsEntity(string title, List<AgendaEntity> audAgendas, DateTime week, List<string> officialisations, string description, string webLink, Constant.Domain domain, string author, string topic, bool selected = false, bool isDraft = false)
+        public NewsEntity(string title,[Optional] List<AgendaEntity> audAgendas, DateTime week, List<string> officialisations, string description, string webLink, Constant.Domain domain, string author, string topic, bool selected = false, bool isDraft = false)
         {
             Title = title;
             AudAgendas = audAgendas;

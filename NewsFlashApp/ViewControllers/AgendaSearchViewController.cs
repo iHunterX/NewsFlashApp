@@ -37,6 +37,7 @@ namespace NewsFlashApp.ViewControllers
                 FilteredagendaList = (from agenda in AgendaList
                                        where agenda.Agenda.ToUpper().Contains(text.ToUpper())
                                        select agenda).ToList();
+                tableView.ReloadData();
             };
         }
 
@@ -45,7 +46,7 @@ namespace NewsFlashApp.ViewControllers
     }
     class AgendaSearchSource : UITableViewSource
     {
-        public static readonly NSString CellId = new NSString("AgendaSearchCell");
+        public static readonly NSString CellId = new NSString("SearchCell");
 
         private AgendaSearchViewController searchViewController;
         private UISearchDisplayController _search;
@@ -63,9 +64,10 @@ namespace NewsFlashApp.ViewControllers
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
-            AgendaSearchCell cell = (AgendaSearchCell)tableView.DequeueReusableCell(CellId);
+            SearchCell cell = (SearchCell)tableView.DequeueReusableCell(CellId);
             AgendaEntity agd = GetAgenda()[indexPath.Row];
-            cell.SetUpCell(agd);
+            cell.agendaLabel.Text = agd.Agenda;
+
 
             return cell;
         }

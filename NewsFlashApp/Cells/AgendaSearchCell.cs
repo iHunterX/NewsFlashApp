@@ -9,14 +9,10 @@ namespace NewsFlashApp.Cells
 
         public AgendaSearchCell (IntPtr handle) : base (handle)
         {
-            selectedButton.Layer.CornerRadius = selectedButton.Frame.Width/2;
-            selectedButton.Layer.BorderWidth = 2;
-            selectedButton.Layer.BorderColor = UIColor.Black.CGColor;
         }
 
         public void SetUpCell(AgendaEntity agd)
         {
-            agendaLabel.Text = agd.Agenda;
         }
     }
 }
