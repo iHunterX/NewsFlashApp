@@ -12,5 +12,11 @@ namespace NewsFlashApp.Models
 
         public string Group { get; set; }
 
+        public bool IsSelected { get; set; }
+
+        public AgendaEntity()
+        {
+            
+        }
     }
 }

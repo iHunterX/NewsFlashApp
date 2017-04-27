@@ -84,6 +84,18 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Cells\AgendaSearchCell.cs" />
+    <Compile Include="Cells\AgendaSearchCell.designer.cs">
+      <DependentUpon>AgendaSearchCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchCell.cs" />
+    <Compile Include="SearchCell.designer.cs">
+      <DependentUpon>SearchCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\AgendaSearchViewController.cs" />
+    <Compile Include="ViewControllers\AgendaSearchViewController.designer.cs">
+      <DependentUpon>AgendaSearchViewController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cells\AgentdasCell.cs" />
     <Compile Include="Cells\AgentdasCell.designer.cs">
       <DependentUpon>AgentdasCell.cs</DependentUpon>
