@@ -46,11 +46,18 @@ namespace NewsFlashApp.ViewControllers
 
             _todayweek = DateTime.Today.ToIso8601Weeknumber();
             tableView.Source = new DetailTableSource(NewListPerWeek, this);
-            _cellDelegate = new CellDelegate(NewListPerWeek, tableView);
+            _cellDelegate = new CellDelegate(NewListPerWeek, tableView,this);
             FilterDataByWeek(_todayweek);
             NavigationItem.SetLeftBarButtonItem(new UIBarButtonItem(UIImage.FromBundle("IconBack"), UIBarButtonItemStyle.Plain, (sender, args) =>
             {
                 NavigationController.PopViewController(true);
+            }), true);
+            NavigationItem.SetRightBarButtonItem(new UIBarButtonItem(UIImage.FromBundle("Add"), UIBarButtonItemStyle.Plain, (sender, args) =>
+            {
+                var editVc = Storyboard.InstantiateViewController("CreateEditNewsViewController") as CreateEditNewsViewController;
+                if (editVc == null) return;
+                var createEditNavigationController = new UINavigationController(editVc);
+                NavigationController.PresentViewController(createEditNavigationController, true, null);
             }), true);
 
         }
@@ -60,7 +67,7 @@ namespace NewsFlashApp.ViewControllers
             NewListPerWeek = NewList.Where(x => x.Week.ToIso8601Weeknumber() == weekInt).ToList();
             weekLabel.Text = "Week " + _todayweek + " | " + DateTime.Today.Year;
             tableView.Source = new DetailTableSource(NewListPerWeek, this);
-            _cellDelegate = new CellDelegate(NewListPerWeek, tableView);
+            _cellDelegate = new CellDelegate(NewListPerWeek, tableView,this);
             ReloadDataTableView();
         }
 
@@ -125,6 +132,7 @@ namespace NewsFlashApp.ViewControllers
                 }
                 var item = _datalist[indexPath.Row];
                 cell.SetUpCell(item);
+                cell.Accessory = UITableViewCellAccessory.DisclosureIndicator;
                 return cell;
             }
 
@@ -136,11 +144,11 @@ namespace NewsFlashApp.ViewControllers
 
             public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
             {
-                tableView.DeselectRow(indexPath, true);
                 var newsDetailVc = (NewsDetailsViewController)_parentView.Storyboard.InstantiateViewController("NewsDetailsViewController");
                 newsDetailVc.FirstIndex = indexPath.Row;
                 newsDetailVc.NewsList = _datalist;
                 _parentView.NavigationController.PushViewController(newsDetailVc,true);
+                tableView.DeselectRow(indexPath,false);
             }
 
 
@@ -170,23 +178,21 @@ namespace NewsFlashApp.ViewControllers
                     ));
             }
            ReloadDataTableView();
-            
-            
         }
-
-       
-
     }
 
     class CellDelegate : SWTableViewCellDelegate
     {
         private List<NewsEntity> _datalist;
         private readonly UITableView tableView;
+        private DetailAgendaViewController ParentView;
 
-        public CellDelegate(List<NewsEntity> dataList, UITableView tableView)
+        public CellDelegate(List<NewsEntity> dataList, UITableView tableView,DetailAgendaViewController parentView)
         {
+
             this._datalist = dataList;
             this.tableView = tableView;
+            this.ParentView = parentView;
         }
 
         public override void ScrollingToState(SWTableViewCell cell, SWCellState state)
@@ -210,19 +216,21 @@ namespace NewsFlashApp.ViewControllers
 
         public override void DidTriggerRightUtilityButton(SWTableViewCell cell, nint index)
         {
-            Console.WriteLine("Right button {0} was pressed.", index);
-
+            NSIndexPath cellIndexPath = tableView.IndexPathForCell(cell);
             switch (index)
             {
                 case 0:
                     // More button was pressed
-                    Console.WriteLine("More button was pressed");
-                    new UIAlertView("Hello", "More more more", null, "cancel", null).Show();
                     cell.HideUtilityButtons(true);
+                    var editVc = ParentView.Storyboard.InstantiateViewController("CreateEditNewsViewController") as CreateEditNewsViewController;
+                    if (editVc == null) return;
+                    var createEditNavigationController = new UINavigationController(editVc);
+                    editVc.News = _datalist[cellIndexPath.Row];
+                    ParentView.NavigationController.PresentViewController(createEditNavigationController, true, null);
                     break;
                 case 1:
                     // Delete button was pressed
-                    NSIndexPath cellIndexPath = tableView.IndexPathForCell(cell);
+                    
                     _datalist.RemoveAt(cellIndexPath.Row);
                     tableView.DeleteRows(new[] { cellIndexPath }, UITableViewRowAnimation.Left);
                     break;

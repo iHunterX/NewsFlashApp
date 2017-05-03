@@ -32,13 +32,7 @@ namespace NewsFlashApp.ViewControllers
             base.ViewDidLoad();
 
             // Perform any additional setup after loading the view, typically from a nib.
-            NavigationItem.SetRightBarButtonItem(new UIBarButtonItem(UIImage.FromBundle("Edit"), UIBarButtonItemStyle.Plain, (sender, args) =>
-            {
-                var editVc = Storyboard.InstantiateViewController("CreateEditNewsViewController") as CreateEditNewsViewController;
-                if (editVc == null) return;
-                var createEditNavigationController = new UINavigationController(editVc);
-                NavController.PresentViewController(createEditNavigationController, true,null);
-            }), true);
+            
 
             AgdList = JsonConvert.DeserializeObject<List<AgendaEntity>>(Resources.Resources.AgendaList).ToArray().GroupBy(x => x.Agenda);
             Query = new List<string>();

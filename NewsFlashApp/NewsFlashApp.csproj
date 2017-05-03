@@ -92,6 +92,10 @@
     <Compile Include="Cells\SearchCell.designer.cs">
       <DependentUpon>SearchCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cells\DraftNewsCell.cs" />
+    <Compile Include="Cells\DraftNewsCell.designer.cs">
+      <DependentUpon>DraftNewsCell.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewControllers\AgendaSearchViewController.cs" />
     <Compile Include="ViewControllers\AgendaSearchViewController.designer.cs">
       <DependentUpon>AgendaSearchViewController.cs</DependentUpon>
@@ -171,6 +175,14 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Amaris.Contracts.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Amaris.Contracts.Core.1.1.5.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Amaris.Contracts.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Amaris.Contracts.NewsFlash.Mobile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Amaris.Contracts.NewsFlash.1.0.3.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Amaris.Contracts.NewsFlash.Mobile.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>

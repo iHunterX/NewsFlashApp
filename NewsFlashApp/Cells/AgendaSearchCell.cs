@@ -11,8 +11,9 @@ namespace NewsFlashApp.Cells
         {
         }
 
-        public void SetUpCell(AgendaEntity agd)
+        public void SetUpCell(NewsEntity news)
         {
+
         }
     }
 }

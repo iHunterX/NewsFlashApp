@@ -29,6 +29,14 @@ namespace NewsFlashApp.ViewControllers
                     , (sender, args) => {
                         SidebarController.ToggleMenu();
                     }), true);
+
+            NavigationItem.SetRightBarButtonItem(new UIBarButtonItem(UIImage.FromBundle("Add"), UIBarButtonItemStyle.Plain, (sender, args) =>
+            {
+                var editVc = Storyboard.InstantiateViewController("CreateEditNewsViewController") as CreateEditNewsViewController;
+                if (editVc == null) return;
+                var createEditNavigationController = new UINavigationController(editVc);
+                NavController.PresentViewController(createEditNavigationController, true, null);
+            }), true);
         }
 
         public override void ViewDidAppear(bool animated)
